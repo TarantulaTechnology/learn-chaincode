@@ -31,6 +31,7 @@ type SimpleChaincode struct {
 // Main
 // ============================================================================================================================
 func main() {
+	fmt.Printf("STARTING SimpleChaincode FOR MARK!")
 	err := shim.Start(new(SimpleChaincode))
 	if err != nil {
 		fmt.Printf("Error starting Simple chaincode: %s", err)
@@ -41,6 +42,11 @@ func main() {
 func (t *SimpleChaincode) Init(stub *shim.ChaincodeStub, function string, args []string) ([]byte, error) {
 	if len(args) != 1 {
 		return nil, errors.New("Incorrect number of arguments. Expecting 1")
+	}
+
+	err := stub.PutState("hello_world", []byte(args[0]))
+	if err != nil {
+		return nil, err
 	}
 
 	return nil, nil
@@ -66,7 +72,7 @@ func (t *SimpleChaincode) Query(stub *shim.ChaincodeStub, function string, args 
 	// Handle different functions
 	if function == "dummy_query" {											//read a variable
 		fmt.Println("hi there " + function)						//error
-		return nil, nil;
+		return "Mark", nil;
 	}
 	fmt.Println("query did not find func: " + function)						//error
 
