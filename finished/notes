@@ -1,0 +1,47 @@
+deployspec
+
+
+
+
+queryspec
+
+{
+  "jsonrpc": "2.0",
+  "method": "query",
+  "params": {
+    "type": 1,
+    "chaincodeID": {
+      "name": "ddaf5abd0fb98e916bbcad29eec6b221179c90bc619a99eee4586756b40cff4561e6eb05e774375c834c6d9443434c97b58999a68f092157620956c0c65b10a1"
+    },
+    "ctorMsg": {
+      "function": "read",
+      "args": [
+        "hello_world"
+      ]
+    },
+    "secureContext": "user_type1_7a6e2788c8"
+  },
+  "id": 0
+}
+
+
+Invokespec
+
+{
+  "jsonrpc": "2.0",
+  "method": "invoke",
+  "params": {
+    "type": 1,
+    "chaincodeID": {
+      "name": "ddaf5abd0fb98e916bbcad29eec6b221179c90bc619a99eee4586756b40cff4561e6eb05e774375c834c6d9443434c97b58999a68f092157620956c0c65b10a1"
+    },
+    "ctorMsg": {
+      "function": "write",
+      "args": [
+        "hello_world", "what time is it?"
+      ]
+    },
+    "secureContext": "user_type1_7a6e2788c8"
+  },
+  "id": 0
+}
