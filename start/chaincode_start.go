@@ -20,7 +20,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/hyperledger/fabric/core/chaincode/shim"
+	"github.com/TarantulaTechnology/fabric/core/chaincode/shim"
 )
 
 // SimpleChaincode example simple Chaincode implementation
@@ -72,7 +72,7 @@ func (t *SimpleChaincode) Query(stub *shim.ChaincodeStub, function string, args 
 	// Handle different functions
 	if function == "dummy_query" {											//read a variable
 		fmt.Println("hi there " + function)						//error
-		return "Mark", nil;
+		return nil, nil;
 	}
 	fmt.Println("query did not find func: " + function)						//error
 
