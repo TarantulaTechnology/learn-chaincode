@@ -4,7 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/hyperledger/fabric/core/chaincode/shim"
+	"github.com/TarantulaTechnology/fabric/core/chaincode/shim"
+	//"github.com/hyperledger/fabric/core/chaincode/shim"
 )
 
 //////////////////////////////////////////////////////////////////////////////
@@ -68,6 +69,9 @@ func (t *SimpleChaincode) Query(stub *shim.ChaincodeStub, function string, args 
 
 	// Handle different functions
 	if function == "read" { //read a variable
+		return t.read(stub, args)
+	}
+	if function == "sloane" { //read a variable
 		return t.read(stub, args)
 	}
 	fmt.Println("query did not find func: " + function)
