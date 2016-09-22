@@ -1,4 +1,118 @@
 
+{
+  "enrollId": "user_type1_dc5247daba",
+  "enrollSecret": "d262ff2c5e"
+}
+
+
+-------
+
+{
+    "jsonrpc": "2.0",
+    "method": "deploy",
+    "params": {
+        "type": 1,
+        "chaincodeID": {
+            "path": "https://github.com/TarantulaTechnology/learn-chaincode/ex2"
+        },
+        "ctorMsg": {
+            "function": "init",
+            "args": [
+                " Deployed by Austin Blockchain Technology!"
+            ]
+        },
+        "secureContext": "user_type1_dc5247daba"
+    },
+    "id": 0
+}
+
+curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" -d "{
+    \"jsonrpc\": \"2.0\",
+    \"method\": \"deploy\",
+    \"params\": {
+        \"type\": 1,
+        \"chaincodeID\": {
+            \"path\": \"https://github.com/TarantulaTechnology/learn-chaincode/finished\"
+        },
+        \"ctorMsg\": {
+            \"function\": \"init\",
+            \"args\": [
+                \" Deployed by Austin Blockchain Technology!\"
+            ]
+        },
+        \"secureContext\": \"user_type1_dc5247daba\"
+    },
+    \"id\": 0
+}" "https://976f2c99-b4d5-47f1-8625-050cc3567aca_vp1.us.blockchain.ibm.com:443/chaincode"
+
+{
+  "jsonrpc": "2.0",
+  "result": {
+    "status": "OK",
+    "message": "f1846c248dcfa64fbfe7176a85b2fdfaeb3f4bc742d68666ab0715f61d3c10f0fea5bb3611235f1697a71e10d8667d3f46cd99cacf42f3ba7084add1a63f8fc4"
+  },
+  "id": 0
+}
+
+------------
+
+{
+  "jsonrpc": "2.0",
+  "method": "query",
+  "params": {
+    "type": 1,
+    "chaincodeID": {
+      "name": "f1846c248dcfa64fbfe7176a85b2fdfaeb3f4bc742d68666ab0715f61d3c10f0fea5bb3611235f1697a71e10d8667d3f46cd99cacf42f3ba7084add1a63f8fc4"
+    },
+    "ctorMsg": {
+      "function": "read",
+      "args": [
+        "hello_world"
+      ]
+    },
+    "secureContext": "user_type1_dc5247daba"
+  },
+  "id": 0
+}
+
+curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" -d "{
+  \"jsonrpc\": \"2.0\",
+  \"method\": \"query\",
+  \"params\": {
+    \"type\": 1,
+    \"chaincodeID\": {
+      \"name\": \"f1846c248dcfa64fbfe7176a85b2fdfaeb3f4bc742d68666ab0715f61d3c10f0fea5bb3611235f1697a71e10d8667d3f46cd99cacf42f3ba7084add1a63f8fc4\"
+    },
+    \"ctorMsg\": {
+      \"function\": \"read\",
+      \"args\": [
+        \"hello_world\"
+      ]
+    },
+    \"secureContext\": \"user_type1_dc5247daba\"
+  },
+  \"id\": 0
+}" "https://976f2c99-b4d5-47f1-8625-050cc3567aca_vp1.us.blockchain.ibm.com:443/chaincode"
+
+{
+  "jsonrpc": "2.0",
+  "error": {
+    "code": -32003,
+    "message": "Query failure",
+    "data": "Error when querying chaincode: Error:Failed to launch chaincode spec(Error starting container: API error (500): Error: image library/976f2c99-b4d5-47f1-8625-050cc3567aca-vp1-f1846c248dcfa64fbfe7176a85b2fdfaeb3f4bc742d68666ab0715f61d3c10f0fea5bb3611235f1697a71e10d8667d3f46cd99cacf42f3ba7084add1a63f8fc4 not found\n)"
+  },
+  "id": 0
+}
+
+
+
+
+
+
+
+
+
+
 
 // deployspec
 
@@ -16,7 +130,7 @@
                 " Deployed by Austin Blockchain Technology!"
             ]
         },
-        "secureContext": "user_type1_7a6e2788c8"
+        "secureContext": "user_type1_dc5247daba"
     },
     "id": 1
 }
@@ -24,13 +138,14 @@
 
 // queryspec
 
+
 {
   "jsonrpc": "2.0",
   "method": "query",
   "params": {
     "type": 1,
     "chaincodeID": {
-      "name": "ddaf5abd0fb98e916bbcad29eec6b221179c90bc619a99eee4586756b40cff4561e6eb05e774375c834c6d9443434c97b58999a68f092157620956c0c65b10a1"
+      "name": "f1846c248dcfa64fbfe7176a85b2fdfaeb3f4bc742d68666ab0715f61d3c10f0fea5bb3611235f1697a71e10d8667d3f46cd99cacf42f3ba7084add1a63f8fc4"
     },
     "ctorMsg": {
       "function": "read",
@@ -38,11 +153,11 @@
         "hello_world"
       ]
     },
-    "secureContext": "user_type1_7a6e2788c8"
+    "secureContext": "user_type1_d2d8719a7d"
   },
   "id": 0
 }
-
+e974feb714
 
 // Invokespec
 
