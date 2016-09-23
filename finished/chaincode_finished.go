@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	//"github.com/TarantulaTechnology/fabric/core/chaincode/shim"
-	"github.com/hyperledger/fabric/core/chaincode/shim"
+	"github.com/TarantulaTechnology/fabric/core/chaincode/shim"
+	//"github.com/hyperledger/fabric/core/chaincode/shim"
 )
 
 //////////////////////////////////////////////////////////////////////////////
