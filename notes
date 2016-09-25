@@ -1,7 +1,7 @@
 
 {
-  "enrollId": "user_type1_dc5247daba",
-  "enrollSecret": "d262ff2c5e"
+  "enrollId": "user_type1_6ef09b74e8",
+  "enrollSecret": "81cd11bfe5"
 }
 
 
@@ -13,7 +13,7 @@
     "params": {
         "type": 1,
         "chaincodeID": {
-            "path": "https://github.com/TarantulaTechnology/learn-chaincode/ex2"
+            "path": "https://github.com/TarantulaTechnology/learn-chaincode/finished"
         },
         "ctorMsg": {
             "function": "init",
@@ -21,7 +21,7 @@
                 " Deployed by Austin Blockchain Technology!"
             ]
         },
-        "secureContext": "user_type1_dc5247daba"
+        "secureContext": "user_type1_6ef09b74e8"
     },
     "id": 0
 }
@@ -62,7 +62,7 @@ curl -X POST --header "Content-Type: application/json" --header "Accept: applica
   "params": {
     "type": 1,
     "chaincodeID": {
-      "name": "f1846c248dcfa64fbfe7176a85b2fdfaeb3f4bc742d68666ab0715f61d3c10f0fea5bb3611235f1697a71e10d8667d3f46cd99cacf42f3ba7084add1a63f8fc4"
+      "name": "714052db41c988e7124a8f24588c629253a8b53fc69d013daa1aaed8be3d61e3205186eb81dc21af6633e5eb0b58d06b6e0fa6d0ee974f720ef29f6c3ae9ec86"
     },
     "ctorMsg": {
       "function": "read",
@@ -70,7 +70,7 @@ curl -X POST --header "Content-Type: application/json" --header "Accept: applica
         "hello_world"
       ]
     },
-    "secureContext": "user_type1_dc5247daba"
+    "secureContext": "user_type1_6ef09b74e8"
   },
   "id": 0
 }
